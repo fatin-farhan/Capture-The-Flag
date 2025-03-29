@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capture The Flag</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="icon" type="image/x-icon" href="/finish.png">
+</head>
+<body>
+    <div class="container">
+        <div class="header-console">
+            <div class="console-line">> Initializing security protocols...</div>
+            <div class="console-line">> System ready</div>
+            <div class="console-line typing">> Welcome to CTF challenge</div>
+        </div>
+        
+        <h1 class="title">
+            <span class="flag">🚩</span> Capture The Flag
+        </h1>
+        
+        <p class="subtitle">🕵️‍♂️ Think like a hacker, stay sharp, and have fun! <br/> Good luck! 💻⚡</p>
+    </div>
+    
+    <div class="info-cards">
+        <div class="card">
+            <h3>Challenge 1</h3>
+            <h4>Brute Force</h4>
+            <p>Brute force is a way to guess a password or code by trying every possible combination until the right one is found. It is often used by hackers but can be stopped with strong passwords and security. Hint: Use Script</p>
+            <a href="/ctf1" class="card-link">Goto CTF1</a>
+        </div>
+        <div class="card">
+            <h3>Challenge 2</h3>
+            <h4>XSS</h4>
+            <p>XSS (Cross-Site Scripting) is a type of security attack where hackers insert harmful code into websites to steal information or control user actions. This can happen when websites don't properly check or clean user input. Hint: Source Code is Important</p>
+            <a href="/ctf2" class="card-link">Goto CTF2</a>
+        </div>
+        <div class="card">
+            <h3>Challenge 3</h3>
+            <h4>CSRF</h4>
+            <p>CSRF (Cross-Site Request Forgery) is a type of attack where a hacker tricks a user into doing something they didn't intend to, like changing their password or sending money, without their knowledge. Hint: Find login endpoints in source code</p>
+            <a href="/attacker" class="card-link">Goto CTF3</a>
+        </div>
+        <div class="card">
+            <h3>Challenge 4</h3>
+            <h4>Command Execution</h4>
+            <p>Command Execution is a vulnerability where user input is executed as a system command. It occurs when functions like exec() or system() process unsanitized input. Hint: Username and Password from CTF1</p>
+            <a href="/ctf4" class="card-link">Goto CTF4</a>
+        </div>
+        <div class="card">
+            <h3>Challenge 5</h3>
+            <h4>Time-Based Blind SQLI</h4>
+            <p>Time-Based Blind SQL Injection exploits response delays to infer database information. Attackers detect true/false conditions based on response time.</p>
+            <a href="/ctf5" class="card-link">Goto CTF5</a>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

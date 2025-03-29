@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XSS</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/finish.png">
+</head>
+<body>
+  <div class="container" >
+    <h1>Community Message Board</h1>
+    <div>
+      <p>Welcome to our community board! Feel free to leave a message.</p>
+      <p  style="display: none;">
+        Try making a POST request to /api/admin/dashboard. But remember, not everyone has access—think about how you can get the right person to make the request for you.
+      </p>
+      
+    </div>
+    
+    <div >
+      <h2>Leave a Comment</h2>
+      <form action="/ctf2/comment" method="POST">
+        <div class=>
+          <label for="name">Your Name:</label>
+          <input class="input-field" type="text" id="name" name="name" required>
+        </div>
+        <div >
+          <label for="message">Your Message:</label>
+          <textarea class="input-field" id="message" name="message" required></textarea>
+        </div>
+        <button class="button" type="submit">Post Comment</button>
+      </form>
+    </div>
+    
+    <div >
+      <h2>Comments</h2>
+      <% if (comments.length === 0) { %>
+        <p>No comments yet. Be the first to comment!</p>
+      <% } else { %>
+        <% comments.forEach(comment => { %>
+          <div >
+            <div >
+              <span ><%= comment.name %></span>
+              <span ><%= comment.date %></span>
+            </div>
+            <div >
+              <%- comment.message %>
+            </div>
+          </div>
+        <% }); %>
+      <% } %>
+    </div>
+  </div>
+  
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time-based blind SQL</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/finish.png">
+</head>
+<body>
+  <div class="container">
+    <h1>Admin Login</h1>
+
+    <% if (error) { %>
+      <p><%= error %></p>
+    <% } %>
+
+    <form method="POST" action="/ctf5/login">
+      <div>
+        <label for="username">Username:</label>
+        <input class="input-field" type="text" id="username" name="username" placeholder="Enter admin username" required>
+      </div>
+      <div>
+        <label for="password">Password:</label>
+        <input class="input-field" type="password" id="password" name="password" placeholder="Enter 18 character password" required>
+      </div>
+      <button class="button" type="submit">Login</button>
+    </form>
+  </div>
+</body>
+</html>

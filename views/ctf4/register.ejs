@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Command Execution</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="icon" type="image/x-icon" href="/finish.png">
+</head>
+<body>
+<div class="container" >
+    <h2>Register</h2>
+    <form action="/ctf4/register" method="POST">
+        <input class="input-field" type="text" name="username" placeholder="Username" required><br>
+        <input class="input-field" type="password" name="password" placeholder="Password" required><br>
+        <button class="button" type="submit">Register</button>
+    </form>
+    <% if (error) { %><p style="color:red"><%= error %></p><% } %>
+    <a href="/ctf4"><button class="button" >Back to Login</button></a>
+	</div>
+</body>
+</html>
